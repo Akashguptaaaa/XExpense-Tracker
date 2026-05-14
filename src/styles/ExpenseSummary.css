@@ -1,0 +1,57 @@
+.expenses-card {
+  min-height: 158px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 24px;
+  border-radius: 14px;
+  background: #707070;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 12px 24px rgba(0, 0, 0, 0.22);
+}
+
+.expenses-info {
+  text-align: center;
+  width: 100%;
+}
+
+.expenses-info h3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.expenses-amount {
+  font-weight: 700;
+  color: #ffb000;
+}
+
+.expenses-info .btn {
+  margin-top: 18px;
+}
+
+@media (max-width: 768px) {
+  .expenses-card {
+    min-height: 146px;
+    padding: 24px 18px;
+  }
+
+  .expenses-info h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .expenses-card {
+    min-height: auto;
+    padding: 20px 16px;
+  }
+
+  .expenses-info h3 {
+    font-size: 1.15rem;
+  }
+}

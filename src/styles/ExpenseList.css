@@ -1,0 +1,136 @@
+.recent-section {
+  padding-bottom: 14px;
+}
+
+.transactions-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0 12px 12px;
+  border-radius: 14px;
+  background: #f7f8fa;
+  overflow: hidden;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 14px;
+  color: #2d3748;
+  border-bottom: 1px solid #d7dce2;
+}
+
+.transaction-item:last-child {
+  border-bottom: none;
+}
+
+.transaction-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.transaction-icon {
+  flex-shrink: 0;
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 999px;
+  background: #e5e7eb;
+  font-size: 1.15rem;
+}
+
+.transaction-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.transaction-title {
+  display: block;
+  font-weight: 600;
+  color: #202938;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.transaction-date {
+  display: block;
+  font-size: 0.85rem;
+  color: #8a909a;
+}
+
+.transaction-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.transaction-amount {
+  font-weight: 700;
+  color: #f59e0b;
+  min-width: 70px;
+  text-align: right;
+}
+
+.btn-icon {
+  border: none;
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.btn-icon:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.04);
+}
+
+.btn-edit {
+  color: #ffffff;
+  background: #f8be2d;
+}
+
+.btn-delete {
+  color: #ffffff;
+  background: #ff2158;
+}
+
+@media (max-width: 768px) {
+  .transaction-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .transaction-actions {
+    width: 100%;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .transaction-amount {
+    margin-right: auto;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .transactions-list {
+    margin: 0 10px 10px;
+  }
+
+  .transaction-item {
+    padding: 16px 12px;
+  }
+}
