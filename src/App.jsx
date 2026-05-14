@@ -11,30 +11,8 @@ import './App.css'
 
 Modal.setAppElement('#root')
 
-const DEFAULT_WALLET_BALANCE = 4500
-const DEFAULT_EXPENSES = [
-  {
-    id: 1,
-    title: 'Auto',
-    price: 50,
-    category: 'Travel',
-    date: '2024-03-22',
-  },
-  {
-    id: 2,
-    title: 'Movie',
-    price: 300,
-    category: 'Entertainment',
-    date: '2024-03-21',
-  },
-  {
-    id: 3,
-    title: 'Samosa',
-    price: 150,
-    category: 'Food',
-    date: '2024-03-20',
-  },
-]
+const DEFAULT_WALLET_BALANCE = 5000
+const DEFAULT_EXPENSES = []
 
 const getInitialWalletBalance = () => {
   try {

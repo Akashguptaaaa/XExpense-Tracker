@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { formatCurrency, formatDate } from '../formatters'
+import { formatCurrency } from '../formatters'
 import '../styles/ExpenseList.css'
 
 const CATEGORY_ICONS = {
@@ -29,7 +29,7 @@ function ExpenseList({ expenses, onEdit, onDelete }) {
                 </div>
                 <div className="transaction-info">
                   <span className="transaction-title">{exp.title}</span>
-                  <span className="transaction-date">{formatDate(exp.date)}</span>
+                  <span className="transaction-date">{exp.date}</span>
                 </div>
               </div>
               <div className="transaction-actions">

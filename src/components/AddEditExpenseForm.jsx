@@ -6,23 +6,23 @@ function AddEditExpenseForm({ isOpen, onClose, onSubmit, initialData, isEditing 
   const handleSubmit = (e) => {
     e.preventDefault()
     const title = e.target.title.value.trim()
-    const amount = e.target.amount.value
+    const price = e.target.price.value
     const category = e.target.category.value
     const date = e.target.date.value
 
-    if (!title || !amount || !category || !date) {
+    if (!title || !price || !category || !date) {
       alert('Please fill in all required fields')
       return
     }
 
-    if (Number(amount) <= 0) {
-      alert('Please enter a valid amount')
+    if (Number(price) <= 0) {
+      alert('Please enter a valid price')
       return
     }
 
     onSubmit({
       title,
-      price: amount,
+      price,
       category,
       date,
     })
@@ -48,8 +48,8 @@ function AddEditExpenseForm({ isOpen, onClose, onSubmit, initialData, isEditing 
           />
           <input
             type="number"
-            name="amount"
-            placeholder="Amount"
+            name="price"
+            placeholder="Price"
             defaultValue={initialData?.price ?? ''}
             step="0.01"
             min="0.01"

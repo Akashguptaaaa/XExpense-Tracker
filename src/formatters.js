@@ -1,12 +1,10 @@
 export function formatCurrency(amount) {
   const numericAmount = Number(amount) || 0
+  const normalizedAmount = Number.isInteger(numericAmount)
+    ? String(numericAmount)
+    : numericAmount.toFixed(2)
 
-  return new Intl.NumberFormat('en-IN', {
-    style: 'currency',
-    currency: 'INR',
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 2,
-  }).format(numericAmount)
+  return `₹${normalizedAmount}`
 }
 
 export function formatDate(dateValue) {
